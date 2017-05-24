@@ -10,16 +10,16 @@
 
 using namespace std;
 
-class tipmenu
+class Menu
 {
 public:
 	int x, y;
 	string pm;
 };
 
-void otioc(tipmenu a, int color);
+void otioc(Menu a, int color);
 
-int menu(tipmenu *pmenu, int *dmenu, int kmenu, int curs);
-void xeroksmenu(tipmenu *pmenu, int *dmenu, int kmenu, int curs);
+int menu(Menu *pmenu, int *dmenu, int kmenu, int curs);
+void xeroksmenu(Menu *pmenu, int *dmenu, int kmenu, int curs);
 
 #endif

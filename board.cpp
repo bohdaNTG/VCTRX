@@ -96,7 +96,6 @@ double input(int x,int y) {
 			if(cVal[i] == '.') count++;
 			if(count>1) {
 				state = 1;
-				count = 0;
 				break;
 			}
 		}
@@ -107,7 +106,7 @@ double input(int x,int y) {
 				break;
 			}
 		}
-		if(strVal.length()>8) state = 1;
+		if(strVal.length()>7) state = 1;
 		if(cVal[strlen(cVal)-1] == '.') state = 1;	
 		
 		if(state == 1) {
@@ -116,6 +115,7 @@ double input(int x,int y) {
 				cout<<" ";	
 			}
 			state = 0;
+			count = 0;
   		}
 		else fl = 0;
 	}
@@ -169,7 +169,7 @@ int strictinput(int x,int y) {
 }
 
 void about() {
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	mainBoard.clearBoard();
 	Board aboutBoard(17,11,66,27);
 	aboutBoard.createBoard();
@@ -185,8 +185,7 @@ void about() {
     	myfile.close();
   	}
   	cin.get();
-  	mainBoard.clearBoard();
-	  //system("pause");
+	mainBoard.clearBoard();
 }
 	
 

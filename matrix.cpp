@@ -198,7 +198,7 @@ void addMatrix() {
 	
 	int _rows1,_cols1,_rows2,_cols2,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -225,15 +225,17 @@ void addMatrix() {
 		else mainBoard.print("Matricies have different sizes and can't be added",6);
 		
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
+		Menu pmenu[2];
+		pmenu[0].pm = "Repeat operation";
 		pmenu[1].pm = "Back to main menu";
 		
-		pmenu[0].x = 1;
+		pmenu[0].x = 33;
 		pmenu[0].y = 9+_rows1+_rows2+_rows1;
-		pmenu[1].x = 1;
+		pmenu[1].x = 33;
 		pmenu[1].y = 10+_rows1+_rows2+_rows1;
 		
+		Board askBoard(31,8+_rows1+_rows2+_rows1,51,11+_rows1+_rows2+_rows1);
+		askBoard.createBoard();	
 		xeroksmenu(pmenu,dmenu,2,curs);
 		do {
 			ch = _getch();
@@ -252,15 +254,15 @@ void addMatrix() {
 				}
 			}
 		} while (exitkey);
-	}while(fl);	
+	}while(fl);
+	
 }
 
 void subMatrix() {
 	
 	int _rows1,_cols1,_rows2,_cols2,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
-	
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -287,15 +289,17 @@ void subMatrix() {
 		else mainBoard.print("Matricies have different sizes and can't be added",6);
 	
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
+		Menu pmenu[2];
+		pmenu[0].pm = "Repeat operation";
 		pmenu[1].pm = "Back to main menu";
 		
-		pmenu[0].x = 1;
-		pmenu[0].y = 10+_rows1+_rows2+_rows1;
-		pmenu[1].x = 1;
-		pmenu[1].y = 11+_rows1+_rows2+_rows1;
+		pmenu[0].x = 33;
+		pmenu[0].y = 9+_rows1+_rows2+_rows1;
+		pmenu[1].x = 33;
+		pmenu[1].y = 10+_rows1+_rows2+_rows1;
 		
+		Board askBoard(31,8+_rows1+_rows2+_rows1,51,11+_rows1+_rows2+_rows1);
+		askBoard.createBoard();	
 		xeroksmenu(pmenu,dmenu,2,curs);
 		do {
 			ch = _getch();
@@ -320,7 +324,7 @@ void subMatrix() {
 void multMatrix() {
 	int _rows1,_cols1,_rows2,_cols2,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	do {
 		mainBoard.clearBoard();
 		mainBoard.print("Input number of rows of first matrix: ",1);
@@ -339,24 +343,24 @@ void multMatrix() {
 			mainBoard.clearBoard();
 			Matrix *mtrx3 = mtrx1*mtrx2;
 			mtrx1.outpMatrix(1,1);
-			set(9*_cols1/2+1,3+_rows1);
-			cout<<"X";
-			mtrx2.outpMatrix(1,_rows1+4);
-			mainBoard.print(" Result: ", 6+_rows1+_rows2);
-			mtrx3->outpMatrix(1,7+_rows1+_rows2);
+			mtrx2.outpMatrix(1,_rows1+3);
+			mainBoard.print(" Result: ", 5+_rows1+_rows2);
+			mtrx3->outpMatrix(1,6+_rows1+_rows2);
 		}
 		else mainBoard.print("Number of columns of 1st matrix should be equal to number of rows of 2nd one!",6);
 		
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
+		Menu pmenu[2];
+		pmenu[0].pm = "Repeat operation";
 		pmenu[1].pm = "Back to main menu";
 		
-		pmenu[0].x = 1;
-		pmenu[0].y = 10+_rows1+_rows2+_rows1;
-		pmenu[1].x = 1;
-		pmenu[1].y = 11+_rows1+_rows2+_rows1;
+		pmenu[0].x = 33;
+		pmenu[0].y = 9+_rows1+_rows2+_rows1;
+		pmenu[1].x = 33;
+		pmenu[1].y = 10+_rows1+_rows2+_rows1;
 		
+		Board askBoard(31,8+_rows1+_rows2+_rows1,51,11+_rows1+_rows2+_rows1);
+		askBoard.createBoard();	
 		xeroksmenu(pmenu,dmenu,2,curs);
 		do {
 			ch = _getch();
@@ -382,7 +386,7 @@ void transpMatrix() {
 	
 	int _rows,_cols,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	
 	do {
@@ -398,15 +402,17 @@ void transpMatrix() {
 		transpMtrx->outpMatrix(1,6+_rows);
 	
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "  Try again.";
-		pmenu[1].pm = "  Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "Repeat operation";
+		pmenu[1].pm = "Back to main menu";
 		
-		pmenu[0].x = 1;
+		pmenu[0].x = 33;
 		pmenu[0].y = 9+_rows+_cols;
-		pmenu[1].x = 1;
+		pmenu[1].x = 33;
 		pmenu[1].y = 10+_rows+_cols;
 		
+		Board askBoard(31,8+_rows+_cols,51,11+_rows+_cols);
+		askBoard.createBoard();	
 		xeroksmenu(pmenu,dmenu,2,curs);
 		do {
 			ch = _getch();
@@ -432,7 +438,7 @@ void inverseMatrix() {
 	
 	int _rows,_cols,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	
 	do {
@@ -445,15 +451,17 @@ void inverseMatrix() {
 		mainBoard.print("Inverse matrix: ", 7);
 		inversedMtrx->outpMatrix(1,9);
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
+		Menu pmenu[2];
+		pmenu[0].pm = "Repeat operation";
 		pmenu[1].pm = "Back to main menu";
 		
-		pmenu[0].x = 1;
-		pmenu[0].y = 13;
-		pmenu[1].x = 1;
-		pmenu[1].y = 14;
+		pmenu[0].x = 33;
+		pmenu[0].y = 14;
+		pmenu[1].x = 33;
+		pmenu[1].y = 15;
 		
+		Board askBoard(31,13,51,16);
+		askBoard.createBoard();	
 		xeroksmenu(pmenu,dmenu,2,curs);
 		do {
 			ch = _getch();
@@ -508,7 +516,7 @@ void determinant() {
 	
 	int order,ask,fl=1;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	
 	do {
@@ -521,15 +529,17 @@ void determinant() {
 		mainBoard.print("Determinant: ", order+5);
 		cout<<res;
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
+		Menu pmenu[2];
+		pmenu[0].pm = "Repeat operation";
 		pmenu[1].pm = "Back to main menu";
 		
-		pmenu[0].x = 1;
+		pmenu[0].x = 33;
 		pmenu[0].y = order + 7;
-		pmenu[1].x = 1;
+		pmenu[1].x = 33;
 		pmenu[1].y = order + 8;
 		
+		Board askBoard(31,order + 6,51,order + 9);
+		askBoard.createBoard();	
 		xeroksmenu(pmenu,dmenu,2,curs);
 		do {
 			ch = _getch();

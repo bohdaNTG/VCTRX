@@ -76,7 +76,7 @@ double Vector::operator*(Vector &vect2) {
 void addVector() {
 	int _dim,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -94,9 +94,9 @@ void addVector() {
 		mainBoard.print("A + B: ",9);
 		vctr3->outpVector(1,10);
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
-		pmenu[1].pm = "Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "\tRepeat operation";
+		pmenu[1].pm = "\tBack to main menu";
 		
 		pmenu[0].x = 1;
 		pmenu[0].y = 12;
@@ -127,7 +127,7 @@ void addVector() {
 void subVector() {
 	int _dim,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -145,9 +145,9 @@ void subVector() {
 		mainBoard.print("A - B: ",9);
 		vctr3->outpVector(1,10);
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
-		pmenu[1].pm = "Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "\tRepeat operation";
+		pmenu[1].pm = "\tBack to main menu";
 		
 		pmenu[0].x = 1;
 		pmenu[0].y = 11;
@@ -178,7 +178,7 @@ void subVector() {
 void scalarProd() {
 	int _dim,ask,fl;
 	double val;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -196,9 +196,9 @@ void scalarProd() {
 		set(9,9);
 		cout<<vctr1*vctr2;
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
-		pmenu[1].pm = "Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "\tRepeat operation";
+		pmenu[1].pm = "\tBack to main menu";
 		
 		pmenu[0].x = 1;
 		pmenu[0].y = 11;
@@ -229,7 +229,7 @@ void scalarProd() {
 void angle() {
 	int _dim,ask,fl=1;
 	double dot,lenSq1,lenSq2,angle;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -251,8 +251,6 @@ void angle() {
 		vctr2.inpVector(1,7);
 		vctr2.outpVector(1,7);
 		
-		
-		
 		if(_dim==2) {
 			dot = vctr1*vctr2;
 			lenSq1 = vctr1.getValue(0)*vctr1.getValue(0) + vctr1.getValue(1)*vctr1.getValue(1);
@@ -262,7 +260,7 @@ void angle() {
 			set(24,9);
 			cout<<angle * 180.0/PI;
 		} 
-		else if(_dim==3) {
+		if(_dim==3) {
 			dot = vctr1*vctr2;
 			lenSq1 = vctr1.getValue(0)*vctr1.getValue(0) + vctr1.getValue(1)*vctr1.getValue(1) + vctr1.getValue(2)*vctr1.getValue(2);
 			lenSq2 = vctr2.getValue(0)*vctr2.getValue(0) + vctr2.getValue(1)*vctr2.getValue(1) + vctr2.getValue(2)*vctr2.getValue(2);
@@ -271,14 +269,11 @@ void angle() {
 			set(24,9);
 			cout<<angle * 180.0/PI;
 		}
-		else {
-			mainBoard.print("Wrong dimension! ",9);
-		} 
 		
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
-		pmenu[1].pm = "Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "\tRepeat operation";
+		pmenu[1].pm = "\tBack to main menu";
 		
 		pmenu[0].x = 1;
 		pmenu[0].y = 11;
@@ -309,7 +304,7 @@ void angle() {
 void projection() {
 	int _dim,ask,fl=1;
 	double top,bott,result,lenSq1,lenSq2;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -343,9 +338,9 @@ void projection() {
 		cout<<result;
 		
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
-		pmenu[1].pm = "Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "\tRepeat operation";
+		pmenu[1].pm = "\tBack to main menu";
 		
 		pmenu[0].x = 1;
 		pmenu[0].y = 11;
@@ -375,7 +370,7 @@ void projection() {
 
 void vectProd() {
 	int ask,fl=1;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	do {
 		mainBoard.clearBoard();
@@ -398,9 +393,9 @@ void vectProd() {
 		vctr3.outpVector(1,7);
 		
 		int i, ch, exitkey = 1, dmenu[2] = { 1,1 },curs=0;
-		tipmenu pmenu[2];
-		pmenu[0].pm = "Try again.";
-		pmenu[1].pm = "Back to main menu";
+		Menu pmenu[2];
+		pmenu[0].pm = "\tRepeat operation";
+		pmenu[1].pm = "\tBack to main menu";
 		
 		pmenu[0].x = 1;
 		pmenu[0].y = 9;

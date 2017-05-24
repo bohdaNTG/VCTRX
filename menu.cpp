@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void otioc(tipmenu a, int color)
+void otioc(Menu a, int color)
 {	
 	set(a.x, a.y);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
@@ -16,7 +16,7 @@ void otioc(tipmenu a, int color)
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 }
 
-int menu(tipmenu *pmenu, int *dmenu, int kmenu, int curs){   
+int menu(Menu *pmenu, int *dmenu, int kmenu, int curs){   
 	int ch,q;
 	ch = _getch();
 	if (ch==72||ch==80)
@@ -39,9 +39,9 @@ int menu(tipmenu *pmenu, int *dmenu, int kmenu, int curs){
 }
 
 
-void xeroksmenu(tipmenu *pmenu, int *dmenu, int kmenu, int curs) {
+void xeroksmenu(Menu *pmenu, int *dmenu, int kmenu, int curs) {
 	int i;
-	Board mainBoard(0,0,83,38);
+	Board mainBoard(0,0,83,39);
 	
 	for (i = 0; i < kmenu; i++)
 	{

@@ -1,37 +1,37 @@
-       *HELP*
 
-   Use up and down
-     arrow keys 
-      for menu
-     navigation
+
+        *HELP*
+ 
+    Use up and down
+      arrow keys 
+       for menu
+      navigation
    
-   Press enter to
-    confirm your
-       choice
+    Press enter to
+     confirm your
+        choice
    
    
-  *INPUT FEATURES*
+   *INPUT FEATURES*
 
-  Max. matrix size:
-         9x9
+   Max. matrix size:
+          9x9
 
-    Max. vector
-    dimension: 9
+     Max. vector
+     dimension: 9
 
-    Enter may be 
-   pressed during 
-   input phase to
-      input 0
+     Enter may be 
+    pressed during 
+    input phase to
+       input 0
 
-   You may enter
-   .N instead of
-        0.N 
-   (N=Any natural
-      number)
+     You may enter
+     .N instead of
+          0.N 
+     N=Any natural
+        number
 
 
-
-  _  _  _ ___ _ _  _ 
-  \  / /   | |_) \/ 
-   \/  \_  | | \ /\ 
-                  
+         _ ___ _   
+   \  / /   | |_) \/ 
+    \/  \_  | | \ /\ 
